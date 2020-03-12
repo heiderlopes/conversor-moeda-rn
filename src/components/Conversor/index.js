@@ -34,7 +34,7 @@ export default class Conversor extends Component {
         const {moedaA, moedaB} = this.props;
         return(
             <View style={styles.container}>
-                <Text style={styles.titulo}>{moedaA} para {moedaB}</Text>
+                <Text style={styles.titulo} accessibilityLabel={Platform.select({android:'eu sou uma label'})} testID={'eu sou uma label'} importantForAccessibility={"no"}>{moedaA} - {moedaB}</Text>
 
                 <TextInput
                     placeholder="Digite o valor que será convertido"
